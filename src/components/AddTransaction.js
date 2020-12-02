@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 export default function AddTransaction() {
     const { addTransaction } = useContext(GlobalContext)
-    const [text, setText] = useState('bharat')
+    const [text, setText] = useState('')
     const [amount, setAmount] = useState(0)
     const newtran = {
         id:Math.random() * 1000,
