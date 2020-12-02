@@ -1,18 +1,15 @@
 import './App.css';
-import Header from './components/Header';
-import Balance from './components/Balance';
-import IncomeExpenses from './components/IncomeExpenses';
-import TransactionList from './components/TransactionList';
-import AddTransaction from './components/AddTransaction';
-import {GlobalProvider} from './context/GlobalState'
+
+import {GlobalProvider} from './context/GlobalState';
+
+import Loginform from './components/Loginform';
+import {Route} from 'react-router-dom'
+import Fullexpense from './components/Fullexpense';
 function App() {
   return (
     <GlobalProvider>
-     <Header></Header>
-     <Balance></Balance>
-     <IncomeExpenses></IncomeExpenses>
-     <TransactionList></TransactionList>
-     <AddTransaction></AddTransaction>
+      <Route path="/login" exact component={Loginform}></Route>
+      <Route path="/" exact component={Fullexpense}></Route>
      </GlobalProvider>
   );
 }
